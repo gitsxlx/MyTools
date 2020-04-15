@@ -3,15 +3,17 @@ package com.test.demo.timer.threadpool;
 import java.util.Date;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.ThreadPoolExecutor;
 import javax.annotation.PostConstruct;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import org.springframework.stereotype.Component;
 
 /**
  * 定时任务
  * 4、线程
- * ThreadPoolExecutor
- * ThreadPoolTaskExecutor
+ * @see ThreadPoolExecutor
+ * @see ThreadPoolTaskExecutor
  *
  * @author WangChao
  * @date 2020/04/08

@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * 定时任务
- * 1、quartz 推荐，可结合mysql和redis做成可视化动态管理任务
+ * 1、quartz 推荐
  * 2、@Scheduled注解
  * 3、Timer
  * 4、线程

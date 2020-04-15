@@ -33,6 +33,11 @@ import org.springframework.stereotype.Component;
  * 定时任务
  * 1、quartz
  * 具体开发应用时应使用模块化方式将各模块分开
+ * 可结合mysql和redis做成可视化动态管理任务
+ * 可使用反射技术管理到具体方法级别
+ * 可结合策略等设计模式设计业务
+ *
+ * 可以会用xxl-job框架
  *
  * http://www.quartz-scheduler.org/api/2.3.0/index.html
  *
