@@ -56,6 +56,12 @@
                 </exclusion>
             </exclusions>
         </dependency>
+        <!--Guava是一种基于开源的Java库，其中包含谷歌正在由他们很多项目使用的很多核心库。这个库是为了方便编码，并减少编码错误。-->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>29.0-jre</version>
+        </dependency>
 
         <dependency>
             <groupId>org.apache.ant</groupId>
@@ -94,6 +100,7 @@
             <artifactId>commons-httpclient</artifactId>
             <version>3.1</version>
         </dependency>
+        <!-- cglib -->
         <dependency>
             <groupId>cglib</groupId>
             <artifactId>cglib</artifactId>
@@ -138,6 +145,13 @@
             <artifactId>javase</artifactId>
             <version>3.4.0</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.10.3</version>
+        </dependency>
+
         <!-- QRCode -->
         <!--<dependency>
             <groupId>QRCode</groupId>

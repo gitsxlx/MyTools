@@ -644,7 +644,76 @@ public class InterViewTest {
         return num * fan(num - 1);
     }
 
-    //31、大小写转换
+    //31、finally
+    static int value = 0;
+
+    static int getResult() {
+        try {
+            return value;
+        } finally {
+            value = 1;
+        }
+    }
+
+    //32、finally
+	/*static int value = 0;
+	static int inc() {
+		return value++;
+	}
+
+	static int dec() {
+		return value--;
+	}
+
+	static int getResult() {
+		//return 1;
+		try {
+			return inc();
+		} finally {
+			return dec();
+		}
+	}*/
+
+    //33、数列
+    public static int f(int n) throws Exception {
+        if (n <= 0) {
+            throw new Exception("参数必须大于0！");
+        }
+        if (n == 1 || n == 2) {
+            return 1;
+        } else {
+            return f(n - 1) + f(n - 2);
+        }
+    }
+
+    /**
+     * 34、输入任意的行和列，输出帕斯卡三⻆对应位置上的数
+     * @parameter row 行
+     * @parameter col 列
+     * @return 返回值
+     * @date 2020年3月17日
+     */
+    public static int recursive(int row, int col) throws Exception {
+        if (row < 0 || col < 0) {
+            throw new RuntimeException("行或列不能小于0");
+        }
+
+        if (col > row) {
+            throw new RuntimeException("列不能大于行");
+        }
+
+        if (row == col) {
+            return 1;
+        }
+
+        if (row > 0 && col > 0) {
+            return recursive(row - 1, col - 1) + recursive(row - 1, col);
+        }
+
+        return 1;
+    }
+
+    //35、大小写转换
     public static void main(String[] args) {
         System.out.println("520131419990909012x".toLowerCase());  //520131419990909012x
         System.out.println("520131419990909012x".toUpperCase());  //520131419990909012X

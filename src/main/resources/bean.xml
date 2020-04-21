@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:context="http://www.springframework.org/schema/context"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+ http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+
+    <!-- 使用<context:annotation-config/>可以隐式地自动向Spring容器注册4个BeanPostProcessor：
+    AutowiredAnnotationBeanPostProcessor
+    CommonAnnotationBeanPostProcessor
+    PersistenceAnnotationBeanPostProcessor
+    RequiredAnnotationBeanPostProcessor -->
+    <context:annotation-config/>
+
+    <!--<context:component-scan base-package="com.test.demo"/>-->
+
+    <!-- Spring提供了5种scope分别是singleton(单例)、prototype(原型)、request、session、global session。-->
+    <bean id="springTest" class="com.test.demo.spring.SpringTest" scope="singleton" init-method="initMethod" destroy-method="destroyMethod"/>
+    <bean id="myBeanPostProcessor" class="com.test.demo.spring.MyBeanPostProcessor" />
+    <!--<bean id="myApplicationListener" class="com.test.demo.spring.MyApplicationListener" />-->
+</beans>

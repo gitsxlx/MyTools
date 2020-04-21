@@ -1,6 +1,11 @@
 package com.test.demo.proxy.cglibproxy;
 
-//它为没有实现接口的类提供代理，为JDK的动态代理提供了很好的补充。
+/**
+ * 它为没有实现接口的类提供代理，为JDK的动态代理提供了很好的补充。
+ *
+ * @author WangChao
+ * @date 2020/04/10
+ */
 public class Main {
 
     public static void main(String[] args) {

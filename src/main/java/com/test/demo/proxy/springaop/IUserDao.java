@@ -2,6 +2,12 @@ package com.test.demo.proxy.springaop;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 
+/**
+ * IUserDao
+ *
+ * @author WangChao
+ * @date 2020/04/10
+ */
 public interface IUserDao {
 
     void save();

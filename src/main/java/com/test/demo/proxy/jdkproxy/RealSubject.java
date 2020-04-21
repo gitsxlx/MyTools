@@ -1,5 +1,11 @@
 package com.test.demo.proxy.jdkproxy;
 
+/**
+ * RealSubject
+ *
+ * @author WangChao
+ * @date 2020/04/10
+ */
 public class RealSubject implements Subject {
 
     @Override

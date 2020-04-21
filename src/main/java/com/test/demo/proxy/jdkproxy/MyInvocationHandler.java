@@ -3,6 +3,12 @@ package com.test.demo.proxy.jdkproxy;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 
+/**
+ * MyInvocationHandler
+ *
+ * @author WangChao
+ * @date 2020/04/10
+ */
 public class MyInvocationHandler implements InvocationHandler {
 
     /**

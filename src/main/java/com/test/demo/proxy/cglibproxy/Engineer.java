@@ -1,5 +1,11 @@
 package com.test.demo.proxy.cglibproxy;
 
+/**
+ * Engineer
+ *
+ * @author WangChao
+ * @date 2020/04/10
+ */
 public class Engineer {
 
     // 可以被代理

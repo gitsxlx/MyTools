@@ -4,7 +4,12 @@ import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
-//接口
+/**
+ * 接口
+ *
+ * @author WangChao
+ * @date 2020/04/10
+ */
 public interface IUserDao {
 
     void save();

@@ -1,6 +1,11 @@
 package com.test.demo.proxy.staticproxy;
 
-//接口
+/**
+ * 接口
+ *
+ * @author WangChao
+ * @date 2020/04/10
+ */
 public interface IUserDao {
 
     void save();

@@ -1,4 +1,4 @@
-package com.test.demo.designpattern;
+package com.test.demo.designpattern.singletion;
 
 /**
  * 单例设计模式
