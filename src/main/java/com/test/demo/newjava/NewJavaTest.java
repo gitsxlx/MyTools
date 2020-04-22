@@ -16,6 +16,7 @@ import java.util.IntSummaryStatistics;
 import java.util.List;
 import java.util.Optional;
 import java.util.Random;
+import java.util.Set;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 import javax.annotation.PostConstruct;
@@ -90,7 +91,17 @@ public class NewJavaTest {
 
         System.out.println("**************************");
 
-        List<String> list2 = Arrays.asList("aa","bb","","cc","dd","","ee","cc","","cc","dd","");  // 集合设值, List，Set 和 Map 接口创建集合方法，jdk9中增加
+        /*JDK9的新特性:
+            List接口 Set接口 Map接口: 里边增加了一个静态方法of, 可以给集合一次性添加多个元素
+            static <E> List<E> of (E ... elements)
+            使用前提:
+                 当集合中存储的元素的个数已经确定了, 不在改变是使用.
+         注意:
+            1. of方法只适用于 List接口 Set接口 Map接口, 不适用于接口的实现类
+            2. of方法返回值是一个不能改变的集合, 集合不能再使用add, put方法添加元素, 会抛出异常
+            3. Set接口和Map接口调用of方法的时候, 不能有重复的元素, 否则会抛出异常*/
+        List<String> list2 = List.of("aa","bb","","cc","aa");  // 集合设值, List，Set 和 Map 接口创建集合方法，jdk9中增加
+        //List<String> list2 = Arrays.asList("aa","bb","","cc","dd","","ee","cc","","cc","dd","");
         System.out.println(list2.stream().filter(item -> item.isEmpty()).count());  // 流，过滤空的并统计数量
         //System.out.println(list1.parallelStream().filter(item -> item.isEmpty()).count());  // 并行过滤空的并统计数量
         list2.stream().filter(item -> !item.isEmpty()).collect(Collectors.toList()).forEach(System.out::println);  // 过滤不为空的并转化为新的集合并输出

@@ -1,6 +1,10 @@
 MyTools测试工具系统
 ====
 
+说明
+----
+    项目基于jdk-11.0.6，idea-2020.1和springboot-2.2.6.RELEASE
+
 目录结构
 ----
     * abstracts 抽象
