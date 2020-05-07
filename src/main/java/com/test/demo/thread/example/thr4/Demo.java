@@ -9,11 +9,10 @@ package com.test.demo.thread.example.thr4;
 public class Demo {
 
     private ThreadLocal<Integer> count = new ThreadLocal<Integer>() {
+        @Override
         protected Integer initialValue() {
             return new Integer(0);
-        }
-
-        ;
+        };
     };
 
     public int getNext() {
