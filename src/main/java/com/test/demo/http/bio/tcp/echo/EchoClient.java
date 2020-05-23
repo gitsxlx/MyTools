@@ -1,4 +1,4 @@
-package com.test.demo.http.bio.echo;
+package com.test.demo.http.bio.tcp.echo;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

@@ -1,4 +1,4 @@
-package com.test.demo.http.bio.echo;
+package com.test.demo.http.bio.tcp.echo;
 
 import java.io.IOException;
 import java.io.PrintStream;

@@ -12,6 +12,7 @@ import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 import org.apache.commons.lang3.concurrent.BasicThreadFactory;
+import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 
 /**
  * 线程复用原理：ThreadPoolExecutor中内部类Woker中runWorker方法是个while循环
@@ -99,7 +100,7 @@ public class Test {
     }
 
     //spring线程池
-    //ThreadPoolTaskExecutor pool = new ThreadPoolTaskExecutor();
+    ThreadPoolTaskExecutor poolTask = new ThreadPoolTaskExecutor();
 
     //线程池不允许使用Executors去创建，而是通过ThreadPoolExecutor的方式，这样的处理方式让写的同学更加明确线程池的运行规则，规避资源耗尽的风险
     //Positive example 1：
@@ -119,9 +120,18 @@ public class Test {
             new LinkedBlockingQueue<Runnable>(1024), namedThreadFactory,
             new ThreadPoolExecutor.AbortPolicy());
 
+
     public void myTest() {
         pool.execute(() -> System.out.println(Thread.currentThread().getName()));
         pool.shutdown();//gracefully shutdown
+
+        /*((ThreadPoolExecutor) pool).setCorePoolSize(11);
+        ((ThreadPoolExecutor) pool).setKeepAliveTime(11, TimeUnit.MILLISECONDS);
+        ((ThreadPoolExecutor) pool).setMaximumPoolSize(12);
+        ((ThreadPoolExecutor) pool).setThreadFactory(defaultThreadFactory());
+        ((ThreadPoolExecutor) pool).setRejectedExecutionHandler(new ThreadPoolExecutor.AbortPolicy());
+
+        ((ThreadPoolExecutor) pool).getLargestPoolSize();*/
     }
 
 }

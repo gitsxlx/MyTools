@@ -1,4 +1,4 @@
-package com.test.demo.http.bio.echo1;
+package com.test.demo.http.bio.tcp.echo1;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;

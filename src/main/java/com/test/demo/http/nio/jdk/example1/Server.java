@@ -1,4 +1,4 @@
-package com.test.demo.http.nio.jdk;
+package com.test.demo.http.nio.jdk.example1;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * TODO
+ * Server
  *
  * @author WangChao
  * @date 2020/05/05

@@ -1,4 +1,4 @@
-package com.test.demo.http.udp;
+package com.test.demo.http.bio.udp;
 
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
