@@ -65,7 +65,7 @@ public class NettyChatServer {
     EventLoopGroup group = new NioEventLoopGroup();
     ChannelFuture cf = null;
 
-    @PostConstruct
+    //@PostConstruct
     public void start() {
         try {
             ServerBootstrap sb = new ServerBootstrap();

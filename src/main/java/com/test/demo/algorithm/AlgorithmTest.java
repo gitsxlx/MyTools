@@ -3,8 +3,11 @@ package com.test.demo.algorithm;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 import java.util.TreeMap;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.locks.AbstractQueuedSynchronizer;
 
 /**
  * 算法
@@ -15,6 +18,21 @@ import java.util.TreeMap;
 public class AlgorithmTest {
 
     public static void main(String[] args) {
+        List<String> settleObj = new ArrayList<>();
+        settleObj.add("1");
+        settleObj.add("2");
+        settleObj.add("3");
+        Integer value = 1;
+        System.out.println(settleObj.contains(value));
+        System.out.println(settleObj.contains(value.toString()));
+
+        AtomicInteger atomicInteger = new AtomicInteger();
+        atomicInteger.incrementAndGet();
+
+        AbstractQueuedSynchronizer aqs;
+    }
+
+    public static void main1(String[] args) {
         int[] a = new int[]{1, 2, 3};
         int[] b = new int[]{2, 5, 3};
         int[] c = new int[]{4, 3, 2};

@@ -30,6 +30,14 @@ MyTools测试工具系统
         * cache 缓存
             * memcached
             * redis
+        * config 配置
+            * apollo 阿波罗
+            * springcloudconfig config
+            * zookeeper zk
+        * job 定时器
+            * elastic-job elastic
+            * quartz quartz
+            * xxl-job xxl
         * lock 锁
             * database
             * redis
@@ -39,9 +47,14 @@ MyTools测试工具系统
             * tcc
             * mq
             * seate
+    * document 文档
+        * excel
+        * pdf
+        * ppt
+        * txt
+        * word
     * encrypt 加密
     * enumtest 枚举
-    * excel excel
     * file 文件
     * framework 框架
         * constant

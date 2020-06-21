@@ -3,6 +3,8 @@ package com.test.demo.thread;
 import java.io.IOException;
 import java.util.Iterator;
 import java.util.UUID;
+import java.util.concurrent.Callable;
+import java.util.concurrent.FutureTask;
 
 /**
  * 线程测试
@@ -45,6 +47,15 @@ public class ThreadTest {
                 }
             }).start();
         }
+
+        FutureTask futureTask = new FutureTask<Integer>(new Callable<Integer>() {
+            @Override
+            public Integer call() throws Exception {
+                return null;
+            }
+        });
+        new Thread(futureTask).start();
+        System.out.println(futureTask.get());
     }
 
 }
