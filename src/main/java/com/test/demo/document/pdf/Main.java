@@ -13,7 +13,7 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("开始转换...");
         String res = new PdfToWord().pdftoword(
-                "F:\\BaiduNetdiskDownload\\鲁班学院java架构师VIP第一期\\05.分布式专题（五）\\zookeeper\\第一节-分布式系统介绍以及zookeeper快速入门.pdf");
+                "D:\\software\\技术\\消息中间件\\RocketMQ\\【课堂笔记】RocketMQ基本原理分析.pdf");
         System.out.println(res);
     }
 }

@@ -34,19 +34,24 @@ public class PdfToWord {
             boolean flag1 = create();
 
             if (flag && flag1) {
+                System.out.println("输入的文件格式合法，开始加载pdf...");
                 // 1、加载pdf
                 PdfDocument pdf = new PdfDocument();
                 pdf.loadFromFile(srcPath);
                 PdfPageCollection num = pdf.getPages();
+                System.out.println("pdf加载完成");
 
                 // 2、如果pdf的页数小于11，那么直接进行转化
                 if (num.getCount() <= 11) {
+                    System.out.println("文件页数小于或等于11，直接进行转化");
                     pdf.saveToFile(desPath, com.spire.pdf.FileFormat.DOCX);
                 }
                 // 3、否则输入的页数比较多，就开始进行切分再转化
                 else {
+                    System.out.println("文件页数大于11，进行切分...");
                     // 第一步：将其进行切分,每页一张pdf
                     pdf.split(splitPath + "test{0}.pdf", 0);
+                    System.out.println("文件切分完成，开始转换...");
 
                     // 第二步：将切分的pdf，一个一个进行转换
                     File[] fs = getSplitFiles(splitPath);
@@ -57,9 +62,12 @@ public class PdfToWord {
                                 docPath + fs[i].getName().substring(0, fs[i].getName().length() - 4)
                                         + ".docx", FileFormat.DOCX);
                     }
+                    System.out.println("文件转换完成，开始合并...");
+
                     //第三步：对转化的doc文档进行合并，合并成一个大的word
                     try {
                         result = MergeWordDocument.merge(docPath, desPath);
+                        System.out.println("文件合并完成");
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
