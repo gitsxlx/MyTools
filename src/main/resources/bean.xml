@@ -17,7 +17,7 @@
     <!--<context:component-scan base-package="com.test.demo"/>-->
 
     <!-- Spring提供了5种scope分别是singleton(单例)、prototype(原型)、request、session、global session。-->
-    <bean id="springTest" class="com.test.demo.spring.SpringTest" scope="singleton" init-method="initMethod" destroy-method="destroyMethod"/>
-    <bean id="myBeanPostProcessor" class="com.test.demo.spring.MyBeanPostProcessor" />
-    <!--<bean id="myApplicationListener" class="com.test.demo.spring.MyApplicationListener" />-->
+    <bean id="springTest" class="com.tool.demo.spring.SpringTest" scope="singleton" init-method="initMethod" destroy-method="destroyMethod"/>
+    <bean id="myBeanPostProcessor" class="com.tool.demo.spring.MyBeanPostProcessor" />
+    <!--<bean id="myApplicationListener" class="MyApplicationListener" />-->
 </beans>

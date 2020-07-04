@@ -8,11 +8,12 @@
         <version>2.2.6.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.test</groupId>
+    <groupId>com.tool</groupId>
     <artifactId>MyTools</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>MyTools</name>
     <description>MyTools project for Spring Boot</description>
+    <packaging>jar</packaging>
 
     <properties>
         <java.version>1.11</java.version>
@@ -258,39 +259,43 @@
             <version>3.0.0</version>
         </dependency>-->
         <!--按如下方式引入每一个第三方的jar包，其中${project.basedir}指当前项目的根目录-->
+        <!--mvn install:install-file -Dfile=D:\Project\IdeaProjects\gitlhub\MyTools\src\main\resources\lib\Spire.Pdf.jar -DgroupId=com.spire.Spire -DartifactId=Spire-Pdf -Dversion=1.0.0 -Dpackaging=jar-->
         <dependency>
-            <groupId>qrcode-R</groupId>
+            <groupId>com.qrcode.qrcode-R</groupId>
             <artifactId>qrcode-R</artifactId>
-            <scope>system</scope>
+            <!--<scope>system</scope>-->
             <version>1.0.0</version>
-            <systemPath>${project.basedir}/src/main/resources/lib/qrcode-R.jar</systemPath>
+            <!--<systemPath>${project.basedir}/src/main/resources/lib/qrcode-R.jar</systemPath>-->
         </dependency>
         <dependency>
-            <groupId>Qrcode</groupId>
+            <groupId>com.Qrcode.Qrcode</groupId>
             <artifactId>Qrcode</artifactId>
-            <scope>system</scope>
+            <!--<scope>system</scope>-->
             <version>1.0.0</version>
-            <systemPath>${project.basedir}/src/main/resources/lib/Qrcode.jar</systemPath>
+            <!--<systemPath>${project.basedir}/src/main/resources/lib/Qrcode.jar</systemPath>-->
         </dependency>
         <dependency>
-            <groupId>spy</groupId>
+            <groupId>com.spy.spy</groupId>
             <artifactId>memcached</artifactId>
-            <scope>system</scope>
+            <!--<scope>system</scope>-->
             <version>2.10.3</version>
-            <systemPath>${project.basedir}/src/main/resources/lib/spymemcached-2.10.3.jar</systemPath>
+            <!--<systemPath>${project.basedir}/src/main/resources/lib/spymemcached-2.10.3.jar</systemPath>-->
         </dependency>
         <dependency>
-            <groupId>Spire</groupId>
-            <artifactId>Doc</artifactId>
-            <scope>system</scope>
-            <systemPath>${project.basedir}/src/main/resources/lib/Spire.Doc.jar</systemPath>
+            <groupId>com.spire.Spire</groupId>
+            <artifactId>Spire-Doc</artifactId>
+            <!--<scope>system</scope>-->
+            <version>1.0.0</version>
+            <!--<systemPath>${project.basedir}/src/main/resources/lib/Spire.Doc.jar</systemPath>-->
         </dependency>
         <dependency>
-            <groupId>Spire</groupId>
-            <artifactId>Pdf</artifactId>
-            <scope>system</scope>
-            <systemPath>${project.basedir}/src/main/resources/lib/Spire.Pdf.jar</systemPath>
+            <groupId>com.spire.Spire</groupId>
+            <artifactId>Spire-Pdf</artifactId>
+            <!--<scope>system</scope>-->
+            <version>1.0.0</version>
+            <!--<systemPath>${project.basedir}/src/main/resources/lib/Spire.Pdf.jar</systemPath>-->
         </dependency>
+
     </dependencies>
 
     <dependencyManagement>
@@ -310,13 +315,22 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <!--值为true是指打包时包含scope为system的第三方Jar包-->
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
                 <configuration>
-                    <includeSystemScope>true</includeSystemScope>
+                    <source>11</source>
+                    <target>11</target>
+                    <encoding>UTF-8</encoding>
+                    <!--值为true是指打包时包含scope为system的第三方Jar包-->
+                    <!--<includeSystemScope>true</includeSystemScope>-->
                 </configuration>
             </plugin>
 
-            <!--如果是打war包，则需在build的plugins中设置maven-war-plugin插件，否则外部依赖无法打进war包 -->
+            <!--如果是打war包，则需在build的plugins中设置maven-war-plugin插件，否则外部依赖无法打进war包-->
             <!--<plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
