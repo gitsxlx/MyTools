@@ -58,14 +58,14 @@ public class NewJavaTest {
         Lambda 表达式是函数式编程思想。
         函数式编程：可推导，就是可省略。*/
 
-        var list = new ArrayList<String>();  // var 定义局部变量，自动推断类型，jdk10中增加
-        list.add("11");
-        list.add("22");
-        list.add("33");
-        list.add("44");
-        list.parallelStream().forEach(System.out::println);  // 流，并行输出，输出方式为方法引用，jdk8中增加
-        var list1 = Arrays.asList("a1", "b1", "c1");
-        list1.forEach(item-> System.out.println(item));  // lambda表达式输出，jdk8中增加
+//        var list = new ArrayList<String>();  // var 定义局部变量，自动推断类型，jdk10中增加
+//        list.add("11");
+//        list.add("22");
+//        list.add("33");
+//        list.add("44");
+//        list.parallelStream().forEach(System.out::println);  // 流，并行输出，输出方式为方法引用，jdk8中增加
+//        var list1 = Arrays.asList("a1", "b1", "c1");
+//        list1.forEach(item-> System.out.println(item));  // lambda表达式输出，jdk8中增加
 
         System.out.println("**************************");
 
@@ -74,19 +74,19 @@ public class NewJavaTest {
         2.对象::实例方法名
         3.类名::实例方法名
         4.类名::new*/
-        var cars = Arrays.asList(new Car("car1", "1"), new Car("car2","2"));
-        cars.forEach(Car::create); // 类名::静态方法名
-        Car car = new Car();
-        cars.forEach(car::update); // 对象::实例方法名
-        cars.forEach(Car::query); // 类名::实例方法名
+//        var cars = Arrays.asList(new Car("car1", "1"), new Car("car2","2"));
+//        cars.forEach(Car::create); // 类名::静态方法名
+//        Car car = new Car();
+//        cars.forEach(car::update); // 对象::实例方法名
+//        cars.forEach(Car::query); // 类名::实例方法名
 
         GreetingService c = Car::new; // 类名::new
         System.out.println(c);
         Supplier<Car> supplier = Car::new; // 类名::new
         System.out.println(supplier);
 
-        var maths = Arrays.asList(4.1, 2.4, 6.5, 1.9, -1.2, -2.6);
-        maths.stream().forEach(item -> System.out.println(Math.round(item)));
+//        var maths = Arrays.asList(4.1, 2.4, 6.5, 1.9, -1.2, -2.6);
+//        maths.stream().forEach(item -> System.out.println(Math.round(item)));
 
         System.out.println("**************************");
 
@@ -99,13 +99,13 @@ public class NewJavaTest {
             1. of方法只适用于 List接口 Set接口 Map接口, 不适用于接口的实现类
             2. of方法返回值是一个不能改变的集合, 集合不能再使用add, put方法添加元素, 会抛出异常
             3. Set接口和Map接口调用of方法的时候, 不能有重复的元素, 否则会抛出异常*/
-        List<String> list2 = List.of("aa","bb","","cc","aa");  // 集合设值, List，Set 和 Map 接口创建集合方法，jdk9中增加
+//        List<String> list2 = List.of("aa","bb","","cc","aa");  // 集合设值, List，Set 和 Map 接口创建集合方法，jdk9中增加
         //List<String> list2 = Arrays.asList("aa","bb","","cc","dd","","ee","cc","","cc","dd","");
-        System.out.println(list2.stream().filter(item -> item.isEmpty()).count());  // 流，过滤空的并统计数量
+//        System.out.println(list2.stream().filter(item -> item.isEmpty()).count());  // 流，过滤空的并统计数量
         //System.out.println(list1.parallelStream().filter(item -> item.isEmpty()).count());  // 并行过滤空的并统计数量
-        list2.stream().filter(item -> !item.isEmpty()).collect(Collectors.toList()).forEach(System.out::println);  // 过滤不为空的并转化为新的集合并输出
-        String filters = list2.stream().filter(item -> !item.isEmpty()).collect(Collectors.joining(","));  // 过滤不为空的并合并成字符串
-        System.out.println(filters);
+//        list2.stream().filter(item -> !item.isEmpty()).collect(Collectors.toList()).forEach(System.out::println);  // 过滤不为空的并转化为新的集合并输出
+//        String filters = list2.stream().filter(item -> !item.isEmpty()).collect(Collectors.joining(","));  // 过滤不为空的并合并成字符串
+//        System.out.println(filters);
 
         System.out.println("**************************");
 
@@ -121,9 +121,9 @@ public class NewJavaTest {
 
         System.out.println("**************************");
 
-        var nums = Arrays.asList(3, 2, 2, 3, 7, 3, 5);
-        IntSummaryStatistics stats = nums.stream().mapToInt((x) -> x).summaryStatistics();  // 统计
-        System.out.println("列表中元素数量：" + stats.getCount() + "，列表中最大的数：" + stats.getMax() + ", 列表中最小的数：" + stats.getMin() + ", 列表中数之和：" + stats.getSum() + ", 列表中数的平均数：" + stats.getAverage());
+//        var nums = Arrays.asList(3, 2, 2, 3, 7, 3, 5);
+//        IntSummaryStatistics stats = nums.stream().mapToInt((x) -> x).summaryStatistics();  // 统计
+//        System.out.println("列表中元素数量：" + stats.getCount() + "，列表中最大的数：" + stats.getMax() + ", 列表中最小的数：" + stats.getMin() + ", 列表中数之和：" + stats.getSum() + ", 列表中数的平均数：" + stats.getAverage());
 
         System.out.println("**************************");
 
@@ -131,8 +131,8 @@ public class NewJavaTest {
 
         System.out.println("**************************");
 
-        java.util.Collections.sort(nums,(s1, s2) -> s1.compareTo(s2));  // 升序排序
-        System.out.println(nums);
+//        java.util.Collections.sort(nums,(s1, s2) -> s1.compareTo(s2));  // 升序排序
+//        System.out.println(nums);
 
         System.out.println("**************************");
 
@@ -291,26 +291,26 @@ interface GreetingService {
     // 默认方法，jdk1.8增加
     default void print(){
         System.out.println("我是一辆车!");
-        log(MYSQL, "INFO");
+        //log(MYSQL, "INFO");
     }
     // 静态方法，jdk1.8增加
     static void blowHorn(){
       System.out.println("按喇叭!!!");
     }
     // 私有方法，jdk1.9增加
-    private void log(String message, String prefix) {
+    /*private void log(String message, String prefix) {
         getConnection();
         System.out.println("Log Message : " + prefix);
         closeConnection();
-    }
+    }*/
     // 私有静态方法，jdk1.9增加
-    private static void getConnection() {
+    /*private static void getConnection() {
       System.out.println("Open Database connection");
-    }
+    }*/
     // 私有静态方法，jdk1.9增加
-    private static void closeConnection() {
+    /*private static void closeConnection() {
       System.out.println("Close Database connection");
-    }
+    }*/
 
 }
 

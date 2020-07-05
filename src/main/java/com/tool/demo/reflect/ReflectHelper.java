@@ -88,7 +88,7 @@ public class ReflectHelper {
             Field field;
             try {
                 // 得到一个类的实例
-                var customer = cls.newInstance();
+                Object customer = cls.newInstance();
                 // 调用根据字段名得到字段的方法
                 field = ReflectHelper.getFieldByFieldName(customer, "name");
                 System.out.println(field.getName());
