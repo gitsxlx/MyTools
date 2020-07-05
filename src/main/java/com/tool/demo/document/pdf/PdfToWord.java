@@ -1,8 +1,8 @@
 package com.tool.demo.document.pdf;
 
-import com.spire.pdf.FileFormat;
-import com.spire.pdf.PdfDocument;
-import com.spire.pdf.widget.PdfPageCollection;
+//import com.spire.pdf.FileFormat;
+//import com.spire.pdf.PdfDocument;
+//import com.spire.pdf.widget.PdfPageCollection;
 import java.io.File;
 
 /**
@@ -33,7 +33,7 @@ public class PdfToWord {
             //第二步：在输入的路径下新建文件夹
             boolean flag1 = create();
 
-            if (flag && flag1) {
+            /*if (flag && flag1) {
                 System.out.println("输入的文件格式合法，开始加载pdf...");
                 // 1、加载pdf
                 PdfDocument pdf = new PdfDocument();
@@ -76,7 +76,7 @@ public class PdfToWord {
             } else {
                 System.out.println("输入的不是pdf文件");
                 return "输入的不是pdf文件";
-            }
+            }*/
         } catch (Exception e) {
             e.printStackTrace();
         } finally {

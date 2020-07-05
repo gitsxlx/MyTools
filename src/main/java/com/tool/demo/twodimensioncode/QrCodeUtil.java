@@ -8,11 +8,11 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
-import com.swetake.util.Qrcode;
-
-import jp.sourceforge.qrcode.QRCodeDecoder;
-import jp.sourceforge.qrcode.data.QRCodeImage;
-import jp.sourceforge.qrcode.exception.DecodingFailedException;
+//import com.swetake.util.Qrcode;
+//
+//import jp.sourceforge.qrcode.QRCodeDecoder;
+//import jp.sourceforge.qrcode.data.QRCodeImage;
+//import jp.sourceforge.qrcode.exception.DecodingFailedException;
 
 /**
  * QRCode
@@ -32,7 +32,7 @@ public class QrCodeUtil {
      * @param version ：版本
      * @return void
      */
-    public static void encoderQRCode(String content, String imgPath, int version) {
+    /*public static void encoderQRCode(String content, String imgPath, int version) {
         try {
             Qrcode qrcodeHandler = new Qrcode();
             //设置二维码排错率，可选L(7%)、M(15%)、Q(25%)、H(30%)，排错率越高可存储的信息越少，但对二维码清晰度的要求越小
@@ -82,7 +82,7 @@ public class QrCodeUtil {
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
+    }*/
 
     /**
      * 解析二维码中的内容
@@ -92,7 +92,7 @@ public class QrCodeUtil {
      * @param imgPath ：二维码的位置
      * @return java.lang.String
      */
-    public static String decoderQRCode(String imgPath) {
+    /*public static String decoderQRCode(String imgPath) {
         // QRCode 二维码图片的文件
         File imageFile = new File(imgPath);
 
@@ -150,5 +150,5 @@ public class QrCodeUtil {
         System.out.println("二维码中的内容：" + decoderQRCode(imgPath1));
         System.out.println("decoderQRCode QRcode success");
     }
-
+*/
 }

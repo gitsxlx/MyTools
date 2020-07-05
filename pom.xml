@@ -260,41 +260,41 @@
         </dependency>-->
         <!--按如下方式引入每一个第三方的jar包，其中${project.basedir}指当前项目的根目录-->
         <!--mvn install:install-file -Dfile=D:\Project\IdeaProjects\gitlhub\MyTools\src\main\resources\lib\Spire.Pdf.jar -DgroupId=com.spire.Spire -DartifactId=Spire-Pdf -Dversion=1.0.0 -Dpackaging=jar-->
-        <dependency>
+        <!--<dependency>
             <groupId>com.qrcode.qrcode-R</groupId>
             <artifactId>qrcode-R</artifactId>
-            <!--<scope>system</scope>-->
+            &lt;!&ndash;<scope>system</scope>&ndash;&gt;
             <version>1.0.0</version>
-            <!--<systemPath>${project.basedir}/src/main/resources/lib/qrcode-R.jar</systemPath>-->
+            &lt;!&ndash;<systemPath>${project.basedir}/src/main/resources/lib/qrcode-R.jar</systemPath>&ndash;&gt;
         </dependency>
         <dependency>
             <groupId>com.Qrcode.Qrcode</groupId>
             <artifactId>Qrcode</artifactId>
-            <!--<scope>system</scope>-->
+            &lt;!&ndash;<scope>system</scope>&ndash;&gt;
             <version>1.0.0</version>
-            <!--<systemPath>${project.basedir}/src/main/resources/lib/Qrcode.jar</systemPath>-->
+            &lt;!&ndash;<systemPath>${project.basedir}/src/main/resources/lib/Qrcode.jar</systemPath>&ndash;&gt;
         </dependency>
         <dependency>
             <groupId>com.spy.spy</groupId>
             <artifactId>memcached</artifactId>
-            <!--<scope>system</scope>-->
+            &lt;!&ndash;<scope>system</scope>&ndash;&gt;
             <version>2.10.3</version>
-            <!--<systemPath>${project.basedir}/src/main/resources/lib/spymemcached-2.10.3.jar</systemPath>-->
+            &lt;!&ndash;<systemPath>${project.basedir}/src/main/resources/lib/spymemcached-2.10.3.jar</systemPath>&ndash;&gt;
         </dependency>
         <dependency>
             <groupId>com.spire.Spire</groupId>
             <artifactId>Spire-Doc</artifactId>
-            <!--<scope>system</scope>-->
+            &lt;!&ndash;<scope>system</scope>&ndash;&gt;
             <version>1.0.0</version>
-            <!--<systemPath>${project.basedir}/src/main/resources/lib/Spire.Doc.jar</systemPath>-->
+            &lt;!&ndash;<systemPath>${project.basedir}/src/main/resources/lib/Spire.Doc.jar</systemPath>&ndash;&gt;
         </dependency>
         <dependency>
             <groupId>com.spire.Spire</groupId>
             <artifactId>Spire-Pdf</artifactId>
-            <!--<scope>system</scope>-->
+            &lt;!&ndash;<scope>system</scope>&ndash;&gt;
             <version>1.0.0</version>
-            <!--<systemPath>${project.basedir}/src/main/resources/lib/Spire.Pdf.jar</systemPath>-->
-        </dependency>
+            &lt;!&ndash;<systemPath>${project.basedir}/src/main/resources/lib/Spire.Pdf.jar</systemPath>&ndash;&gt;
+        </dependency>-->
 
     </dependencies>
 

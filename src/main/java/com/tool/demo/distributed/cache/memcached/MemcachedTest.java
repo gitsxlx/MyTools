@@ -2,9 +2,9 @@ package com.tool.demo.distributed.cache.memcached;
 
 import java.net.InetSocketAddress;
 import java.util.concurrent.Future;
-import net.spy.memcached.CASResponse;
-import net.spy.memcached.CASValue;
-import net.spy.memcached.MemcachedClient;
+//import net.spy.memcached.CASResponse;
+//import net.spy.memcached.CASValue;
+//import net.spy.memcached.MemcachedClient;
 
 /**
  * Memcached是一个自由开源的，高性能，分布式内存对象缓存系统。基于内存的key-value存储，用来存储小块的任意数据（字符串、对象）。
@@ -23,7 +23,7 @@ import net.spy.memcached.MemcachedClient;
  */
 public class MemcachedTest {
 
-    public static void memcachedJava() {
+    /*public static void memcachedJava() {
         try {
             // 本地连接 Memcached 服务
             MemcachedClient mcc = new MemcachedClient(new InetSocketAddress("127.0.0.1", 11211));
@@ -333,6 +333,6 @@ public class MemcachedTest {
         } catch (Exception ex) {
             System.out.println(ex.getMessage());
         }
-    }
+    }*/
 
 }

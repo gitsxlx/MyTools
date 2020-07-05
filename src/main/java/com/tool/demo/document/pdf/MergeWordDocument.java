@@ -1,7 +1,7 @@
 package com.tool.demo.document.pdf;
 
-import com.spire.doc.Document;
-import com.spire.doc.FileFormat;
+//import com.spire.doc.Document;
+//import com.spire.doc.FileFormat;
 import java.io.File;
 
 /**
@@ -18,7 +18,7 @@ public class MergeWordDocument {
 	 * @param desPath
 	 * @return
 	 */
-    public static boolean merge(String docPath, String desPath) {
+    /*public static boolean merge(String docPath, String desPath) {
         File[] fs = getSplitFiles(docPath);
         Document document = new Document(docPath + "test0.docx");
 
@@ -28,7 +28,7 @@ public class MergeWordDocument {
         //第四步：对合并的doc进行保存2
         document.saveToFile(desPath);
         return true;
-    }
+    }*/
 
 	/**
 	 * 取得某一路径下所有的pdf
