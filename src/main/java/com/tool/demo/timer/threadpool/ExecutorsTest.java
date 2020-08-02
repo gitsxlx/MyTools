@@ -32,6 +32,7 @@ public class ExecutorsTest {
     //使用线程来控制相对更灵活些，可以根据自己的需要判断什么时候运行，什么时候停止
     public static class TaskTest {
         private static final ExecutorService pool = Executors.newFixedThreadPool(5);// 线程池
+        private static final ExecutorService scheduledPool = Executors.newScheduledThreadPool(5);// 线程池
         public static final int[] arr = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9};
 
         private void start() {
