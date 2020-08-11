@@ -1,5 +1,6 @@
 package com.tool.demo.http;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
@@ -194,5 +195,7 @@ public class Http4 {
         }
         return sb1.toString();
     }
+
+
 
 }

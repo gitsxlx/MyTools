@@ -1,9 +1,14 @@
 package com.tool.demo.algorithm;
 
+import java.util.ArrayDeque;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
+import java.util.PriorityQueue;
+import java.util.Queue;
 import java.util.Set;
 import java.util.TreeMap;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -67,6 +72,8 @@ public class AlgorithmTest {
 
     /**
      * 最大彩礼
+     * 暴力
+     *
      * @param a 王子a分别对公主的彩礼
      * @param b 王子b分别对公主的彩礼
      * @param c 王子c分别对公主的彩礼
@@ -98,30 +105,48 @@ public class AlgorithmTest {
         return max;
     }
 
+
+    static int max = 0;
+    static List<int[]> bridePrices = new ArrayList<>();
+
+    public static int max1(List<int[]> list) {
+        bridePrices = list;
+        max(0, 0, null);
+        return max;
+    }
     /**
-     * 递归实现有问题
-     * @param list
+     * 递归实现（有问题）
+     *
      * @param i
-     * @param max
      * @return
      */
-    public static int max(ArrayList<int[]> list, int i, int max) {
-        // 每次组合结果
-        int sum = 0;
-        if (list.get(0).length > i) {
-            HashSet set = new HashSet();
-            sum = sum(list, set, i, 0);
-            System.out.println("s " + sum);
-            if (sum > max) {
-                max = sum;
+    public static void max(int i, int m, Set set) {
+        if (i == (bridePrices.size() - 1)) {
+            for (int j = 0; j < bridePrices.get(i).length; j++) {
+                if (!set.contains(j)) {
+                    m += bridePrices.get(i)[j];
+                    System.out.println("ij=" + bridePrices.get(i)[j] + ",m:" + m);
+                    max = Math.max(max, m);
+                    break;
+                }
             }
-            int max1 = max(list, i + 1, max);
-            if (max1 > max) {
-                max = max1;
+        } else {
+            for (int j = 0; j < bridePrices.get(i).length; j++) {
+                if(i == 0 && j == 2){
+                    System.out.println("i:" + i + ",j:" + j);
+                }
+
+                if (i == 0) {
+                    set = new HashSet();
+                    m = 0;
+                }
+                if (!set.contains(j)) {
+                    m += bridePrices.get(i)[j];
+                    set.add(j);
+                    max(i + 1, m, set);
+                }
             }
         }
-        System.out.println("m " + max);
-        return max;
     }
 
     public static int sum(ArrayList<int[]> list, HashSet set, int i, int n) {
@@ -152,5 +177,9 @@ public class AlgorithmTest {
             }
         }
     }
+
+
+
+
 
 }
