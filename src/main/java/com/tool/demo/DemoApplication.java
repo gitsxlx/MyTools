@@ -3,6 +3,8 @@ package com.tool.demo;
 import com.netflix.loadbalancer.ILoadBalancer;
 import com.netflix.loadbalancer.IRule;
 import com.netflix.loadbalancer.Server;
+import java.util.HashMap;
+import java.util.Map;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -48,6 +50,18 @@ public class DemoApplication implements CommandLineRunner {
             return null;
         }
     }
+
+    /**
+     * 匿名内部类的代码块
+     */
+    private final static Map<Integer, String> hashMap = new HashMap<Integer, String>() {
+        private static final long serialVersionUID = 1L;
+
+        {
+            put(1, "1");
+            put(2, "2");
+        }
+    };
 
 }
 
