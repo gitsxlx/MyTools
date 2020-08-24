@@ -32,6 +32,12 @@ public class WebController {
      * spring不允许/不支持把值注入到静态变量中；
      * spring支持set方法注入，可以利用非静态setter方法注入静态变量；
      *
+     * 原因：
+     * 1、静态变量(即类变量)是一个类的属性，而不是对象的属性。spring依赖注入是基于对象层面上的。
+     * 2、而且使用静态变量扩大了静态方法的使用范围，静态方法在spring是不推荐使用的，依赖注入的主要目的是让容器去产生一个对象的实例，然后在整个生命周期中使用他们。
+     * 一旦你使用静态方法，就不再需要去产生这个类的实例，这会让testing变得更加困难，同时你也不能为一个给定的类，依靠注入方式去产生多个具有不同的依赖环境的实例。
+     * 这种static field是隐含共享的，并且是一种global全局状态，spring同样不推荐这样去做。
+     *
      * @param contextPath1
      */
     @Value("${server.servlet.context-path:YuLinYun}")
